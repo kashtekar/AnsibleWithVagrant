@@ -1,6 +1,7 @@
 #!/bin/bash
-#apt-get update -y
-#echo 'vagrant ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+apt-get update -y
+mkdir -p /home/vagrant/ansible
+echo 'vagrant ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
 

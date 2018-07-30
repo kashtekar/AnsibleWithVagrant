@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
       subconfig.vm.network :private_network, ip: "10.0.0.#{i + 10}"
       subconfig.vm.provision "shell" do |shell|
         #shell.privileged = false
-        shell.path = 'D:\Vagrant\Test\client-sudoer.sh'
+        shell.path = 'D:\Vagrant\Test\AnsibleWithVagrant\client-sudoer.sh'
       end
     end
   end
@@ -20,11 +20,12 @@ Vagrant.configure("2") do |config|
     control.vm.box = "bento/ubuntu-16.04"
     control.vm.network "private_network", ip: "10.0.0.10"
     control.vm.hostname = "ansible-control"
-    control.vm.synced_folder ".", "/vagrant", type: "nfs"
-    control.vm.provision "shell", path: 'D:\Vagrant\Test\ansible-setup.sh'
+    #control.vm.synced_folder ".", "/vagrant", type: "nfs"
+    control.vm.synced_folder "ansible-basic", "/home/vagrant/ansible/"
+    control.vm.provision "shell", path: 'D:\Vagrant\Test\AnsibleWithVagrant\ansible-setup.sh'
     control.vm.provision "shell" do |shell|
       shell.privileged = false
-      shell.path = 'D:\Vagrant\Test\update-sudoer.sh'
+      shell.path = 'D:\Vagrant\Test\AnsibleWithVagrant\update-sudoer.sh'
     end
   end
   # config.vm.box_check_update = false
