@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   (1..NODE_COUNT).each do |i|
     config.vm.define "ansible-node#{i}" do |subconfig|
       subconfig.vm.box = BOX_IMAGE
-      subconfig.vm.hostname = "node#{i}"
+      subconfig.vm.hostname = "ansible-node#{i}"
       subconfig.vm.network :private_network, ip: "10.0.0.#{i + 10}"
       subconfig.vm.provision "shell" do |shell|
         #shell.privileged = false
