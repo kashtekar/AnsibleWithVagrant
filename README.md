@@ -1,13 +1,17 @@
-Ansible set-up using Vagrant
-This repo contains:
+# Ansible Set-up Using Vagrant
+
+[![N|Solid](https://dudodiprj2sv7.cloudfront.net/product-logos/ai/vQ/ATKTZ7HRC8TF.PNG)](https://www.vagrantup.com/docs/provisioning/ansible.html)
+### This repo contains:
+
     - Vagrantfile to create:
-        - Ansible-controller box
-        - Two Ansible managed nodes
+        * Ansible-controller box
+        * Two Ansible managed nodes
     - Shell scripts to:
         - Install ansible on Ansible-controller box
         - Add "vagrant" as user to Nodes.
-        - Add key for SSH to nodes.
-Thus, running "vagrant up" should do the following job of automation:
+        - Copy key for SSH.
+
+#### Thus, running "vagrant up" should do the following job of automation:
     - Create 3 vagrant boxes.
     - Update all boxes.
     - Install required packages and Ansible on one of the box.
