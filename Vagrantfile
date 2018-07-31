@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 BOX_IMAGE = "ubuntu/trusty64"
-NODE_COUNT = 2
+NODE_COUNT = 2va
 
 Vagrant.configure("2") do |config|
 
