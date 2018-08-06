@@ -1,0 +1,5 @@
+---
+
+- name: Installing Apache
+  apt: name=apache2 state=latest
+

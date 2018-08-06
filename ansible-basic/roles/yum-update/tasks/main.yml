@@ -1,0 +1,4 @@
+---
+# tasks file for yum-update
+- name: To update the Linux Distribution
+  apt: name=* state=latest update_cache=yes
