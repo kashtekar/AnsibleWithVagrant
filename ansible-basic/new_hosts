@@ -1,0 +1,8 @@
+[test]
+10.0.0.13 
+
+
+#[test:vars]
+#ansible_user=vagrant
+#ansible_ssh_pass={{ ssh_pass }}
+`

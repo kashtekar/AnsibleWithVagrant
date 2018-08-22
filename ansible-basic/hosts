@@ -1,0 +1,14 @@
+[test]
+10.0.0.11
+10.0.0.12
+
+
+[testname]
+ansible-node1
+ansible-node2
+
+[windows]
+10.0.0.14
+
+
+

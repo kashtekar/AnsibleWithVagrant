@@ -1,0 +1,13 @@
+---
+# tasks file for yum-update
+- name: Replace ‘*.* @10.1.0.100’ 
+  lineinfile:
+    dest: /etc/rsyslog.conf
+    regexp: "^*.* @10.1.0.100"
+    line: "# *.* @10.1.0.100"
+
+- name: Copy audit.conf file to /etc/rsyslog.d
+    copy: 
+      src: audit.config
+      dest: /etc/rsyslog.d
+      backup: yes

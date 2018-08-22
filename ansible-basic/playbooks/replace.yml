@@ -1,0 +1,13 @@
+---
+# Need to specify hosts on the Ansible machine host file
+- hosts: test
+  #remote_user: vagrant
+  become: true
+
+  tasks:
+  - name: Comment out *.*@10.1.0.100 line in /etc/rsyslog.conf
+    replace:
+      dest: /etc/rsyslog.conf
+      regexp: '^(\*\.\*\s+\@@?10\.1\.0\.100)'
+      replace: '#\1'
+      backup: yes
